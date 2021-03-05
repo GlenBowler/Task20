@@ -1,0 +1,173 @@
+#LandingBody {
+  background-image: url(invoker.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#Menu {
+  position: absolute;
+  border: none;
+  top: 50%;
+  left: 38%;
+  margin-top: -50px;
+  margin-left: -10px;
+}
+
+#Menu button {
+  margin: 1em;
+  width: 20em;
+  height: 3em;
+  border: black;
+  border-radius: 5px;
+  background: none;
+  color: lightskyblue;
+}
+
+#homePageStyling {
+  background-image: url(dire-radiant.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#homePageStyling p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+#homePageStyling h2 {
+  color: white;
+}
+
+#homePageStyling a {
+  display: inline;
+  color: red;
+}
+
+.container-home {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+#button-placing {
+  margin-left: 35%;
+  margin-top: 20px;
+}
+
+.container-leader {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.topImg {
+  margin-bottom: 10px;
+}
+
+.topImg img {
+  width: 200px;
+  height: 150px;
+  display: inline;
+}
+
+.bottomImg {
+  margin-top: 10;
+}
+
+.bottomImg img {
+  width: 200px;
+  height: 150px;
+  display: inline;
+}
+
+.leaderboardTable {
+  width: 100%;
+}
+
+.leaderboardTable h1 {
+  text-align: center;
+}
+
+.leaderboardTable table, .leaderboardTable td, .leaderboardTable th {
+  width: 1250px;
+  border: solid black;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.leaderboardTable a {
+  display: inline;
+  position: center;
+}
+
+#TableBack {
+  background-color: Gainsboro;
+}
+
+.container-tour {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+#DPC-Tournament {
+  border: 1px solid black;
+  width: 90%;
+  margin-top: 10px;
+  padding-left: 5px;
+}
+
+#DPC-Tournament p {
+  font-size: 15px;
+}
+
+#DPC-Tournament li {
+  font-size: 18px;
+}
+
+#The-international {
+  border: 1px solid black;
+  width: 90%;
+  margin-top: 10px;
+  padding-left: 5px;
+}
+
+#The-international p {
+  font-size: 15px;
+}
+
+#The-international li {
+  font-size: 18px;
+}
+
+.contatactUsForm {
+  border: 1px solid black;
+  width: 90%;
+  height: 500px;
+  margin-top: 10px;
+  padding-left: 5px;
+}
+
+.myTextContainer {
+  display: block;
+  border: 10px;
+  padding: 10px;
+}
+
+#tourBack {
+  background-color: Sienna;
+}
+
+.navBar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navBar a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: inline;
+}
+/*# sourceMappingURL=Styling.css.map */

@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <h1>Save for later page</h1>
+
+    </head>
+    <body>
+        <span id="resulHistory"></span><!--Creating a span element that will show data that user saved prevouisly-->
+        <span id="resulGameplay"></span><!--Creating a span element that will show data that user saved prevouisly-->
+    <script>
+        //Javascript to get the data to show on your page that user have saved
+        document.getElementById("resulHistory").innerHTML=localStorage.getItem("historyTxt");//Return your save data from h in history
+        document.getElementById("resulGameplay").innerHTML=localStorage.getItem("gameplayTxt");//Return your save data from p in history
+    </script>
+    </body>
+</html>

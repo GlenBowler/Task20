@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Home page</title>
+        <link href="Styling.css" rel="stylesheet" type="text/css"><!--Styling for page-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!--Linking my JQeury to my page-->
+    </head>
+<div class ="container-home">
+    <body id="homePageStyling">
+        <form>
+            <div id ="History"><!--Div to history so that we can access to use for localstorage later-->
+
+        <h2><ins>Brief History of Dota</ins></h2><!--Header for one of the paragraph that we see on page -->
+                <!--Paragraph with content for user to see on page-->
+        <p>Defense of the Ancients (DotA) is a multiplayer online battle arena (MOBA) mod for the video game Warcraft III: Reign of Chaos (2002) and its expansion, 
+            The Frozen Throne. The objective of the game is for each team to destroy their opponents' Ancient, a heavily guarded structure at the opposing corner of the map, which is based on the "Aeon of Strife" map for StarCraft.
+            Players use powerful units known as heroes, and are assisted by allied teammates and AI-controlled fighters. As in role-playing games, players level up their heroes and use gold to buy equipment during the mission.</p>
+        <p>The scenario was developed with the "World Editor" of Reign of Chaos, and was updated upon the release of its expansion, The Frozen Throne. 
+            There have been many variations of the original concept, the most popular being DotA Allstars, eventually simplified to DotA. 
+            The mod has been maintained by several authors during development, with the pseudonymous designer, known as IceFrog, maintaining the game since the mid-2000s.</p>
+            <p>DotA became a feature at several worldwide tournaments, including Blizzard Entertainment's BlizzCon and the Asian World Cyber Games. Critical reception to DotA was positive, with it being called one of the most popular mods of any game.[1]
+             DotA is largely attributed as being the most significant inspiration for the MOBA genre.[2][3] 
+            American video game developer Valve acquired the intellectual property rights to DotA in 2009 to develop a franchise, beginning with the standalone sequel, Dota 2, released in July 2013.[4][5]</p>
+            <input type="button"  value="Save for later" id="history_btn"/><!--Button so that user can save data to access it on later phase-->
+            </div>
+            </form>
+            <div id="Gameplay"><!--Header for one of the paragraph that we see on page -->
+            <h2><ins>Dota Gameplay</ins></h2>
+            <!--Paragraph with content for user to see on page-->
+        <p>Defense of the Ancients pits two teams of players against each other: the Sentinel and the Scourge. Players on the Sentinel team are based at the southwest corner of the map, and those on the Scourge team are based at the northeast corner. 
+            Each base is defended by towers and waves of units which guard the main paths leading to their base. 
+            In the center of each base is the "Ancient", a building that must be destroyed to win the game.[6][7]</p>
+    
+        <p>Each human player controls one hero, a powerful unit with unique abilities. In DotA, players on each side choose one of 112 heroes,[8] each with different abilities and tactical advantages over other heroes. 
+            The scenario is highly team-oriented; it is difficult for one player to carry the team to victory alone. DotA allows up to ten players in a five-versus-five format.[9]</p>
+    
+        <p>Because the gameplay revolves around strengthening individual heroes, it does not require focus on resource management and base-building, unlike most traditional real-time strategy games. 
+            Killing computer-controlled or neutral units earns the player experience points; the player gains a level when enough experience is accumulated. Leveling up improves the hero's toughness and the damage they inflict, and allows players to upgrade spells or skills.
+             In addition to accumulating experience, players also manage a single resource of gold.[10] The typical resource-gathering of Warcraft III is replaced by a combat-oriented money system; in addition to a small periodic income, heroes earn gold by killing or destroying hostile units, base structures, and enemy heroes.[11] 
+             This has caused emphasis on a technique called "last-hitting," which is when the player attacks a hostile unit when "its hit points are low enough to kill it with one blow".[12] Using gold, players buy items to strengthen their hero and gain abilities; certain items can be combined with recipes to create more powerful items. 
+            Buying items that suit one's hero is an important tactical element of the mod</p>
+        <p>DotA offers a variety of game modes, selected by the game host at the beginning of the match. The game modes dictate the difficulty of the scenario, as well as whether players can choose their hero or are assigned one randomly. Many game modes can be combined, allowing more flexible options.[14]</p>
+        <input type="button" value="Save for later" id="gameplay_btn"/><!--Button so that user can save data to access it on later phase-->
+         </div>
+
+        </br></br>
+        <p><b>If you would like to learn more about Dota heroes and items please click on the link below:</b></p>
+        <p><a href="https://www.dota2.com/heroes/">https://www.dota2.com/heroes/</a></p>
+    </br>></br>
+    <div id="button-placing"><!--Buttons so that user can go to other pages of the website-->
+        <a href="Landing Page.html"><button type="submit">Landing Page</button></a>
+        <a href="UpcomingTour.html"><button type="submit">Upcoming Tournaments</button></a>
+        <a href="CurrentLeaderBoard.html"><button type="submit">Current Leaderboard</button></a>
+        <a href="save_later.html"><button type="submit">Save for later</button></a>
+    </div>
+</div>
+    <script>
+        //Jqeury and JS code
+
+        //Chained effect to change to text color of my paragraph on home screen
+    $(".container-home").slideUp(1000).slideDown(1000).css('background-color','black');
+
+    if(window.localStorage){//Check to see if your webrowser support relevant storage APIet 
+        let countH=0;
+        
+        $("#history_btn").click(function(){//Once click on button must save history of your data
+            let htext=$("#History").text();//Converting the paragraph to text 
+            localStorage.setItem("historyTxt",htext);//Save text to localstorage
+            countH+=1;//Add 1 each time once user click on button to add to save page
+            alert("Number of items that have been saved "+countH);//Alert user how much items he have save to local storage
+            
+        });
+        
+
+        $("#gameplay_btn").click(function(){//Once click on button must save gameplay of your data
+            let gtext=$("#Gameplay").text();//Converting the paragraph to text 
+            localStorage.setItem("gameplayTxt",gtext);//Save text to localstorage
+            countH+=1;//Add 1 each time once user click on button to add to save page
+            alert("Number of items that have been saved "+countH);//Alert user how much items he have save to local storage
+        });
+}
+
+    </script>
+    </body>
+
+</html>

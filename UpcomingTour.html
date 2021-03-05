@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Upcoming tournaments</title>
+        <link href="Styling.css" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!--Link to Jqeury-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--Link to bootsrap -->
+    </head>
+    <body id="tourBack">
+        <div class="container-tour">
+    <!--Create a dropdown menu for with link to past tournaments-->
+    <div class="navBar">
+        <!--Creating a menu at top of your page-->
+        <a href="Landing Page.html" >Landing Page</a>
+        <a href="https://blog.dota2.com/">New Dota updates</a>
+        <!--Drop down menu-->
+        <a id ="dropdown_toggle">Prevouis Tournaments
+        <i class="fa fa-caret-down"></i></a>
+       
+            <ul id="dropdownMenu"><!--Drop down content-->
+            <li><a href="https://liquipedia.net/dota2/ONE_Esports/Singapore_Major/2021">Singapore Major</a></li>
+            <li><a href="https://liquipedia.net/dota2/DreamLeague/Season_13">Dream League Season 13</a></li>
+            <li><a href="https://liquipedia.net/dota2/OMEGA_League/1/Europe/Immortal_Division">Immortal Division</a></li>
+            <li><a href="https://liquipedia.net/dota2/ESL_One/Germany/2020">ESL One Germany</a></li>
+            <li><a href="https://liquipedia.net/dota2/EPIC_League/2/Division_1">Epic League</a></li>
+            </ul>
+        
+        
+    </div>
+
+    
+   
+    <!--Paragragh with DPC tournament info and letting user add comment and like if he wants to -->
+    <div id="DPC-Tournament">
+        <!--DPC tournament details-->
+        <div id="DPC-data">
+        <h1><i>DPC 2021 S1: SEA</i></h1>
+        <h4>Participants:</h4>
+        <ul>
+            <li>Eight teams from the Stage 2 of the Closed Qualifier</li>
+        </ul>
+        <h4>Standings:</h4>
+        <ul>
+            <li>Single Round robin</li>
+            <li>All matches are best out of 3 except for grand final that is best out of 5 </li>
+        </ul>
+        </div>
+        </form>
+        </br>
+        <!--Link to more details to this tournament-->
+        <p>For more info about this tournament visit :<a href="https://liquipedia.net/dota2/Dota_Pro_Circuit/2021/1/Southeast_Asia/Lower_Division">https://liquipedia.net/dota2/Dota_Pro_Circuit/2021/1/Southeast_Asia/Lower_Division</a></p>
+      
+        <form>
+            <!--A like button user can click on if he like page-->
+            <i onclick="likeButton(this)" class="fa fa-thumbs-up" id ="dpc-like"></i>
+        </form></br>
+        <form>
+            <!--Comment area where user can leave comments for us-->
+            <textarea id="dpcwords" rows="3" cols="50" placeholder="Please enter a comment"></textarea></br>
+            <input type="button" onclick="getDPCFeedback()" value="Enter" /> <br><!--Button so that user can add conetent once he press enter-->
+            <p id="dpcpara"></p>
+        </form>
+        
+   
+    </div>
+    <!--Paragragh with TI info and letting user add comment and like if he wants to -->
+    <div id="The-international">
+        <!--TI X tournament details-->
+        <div id="Tix-data">
+        <h1><i>The International X</i></h1>
+        <h4>Participants:</h4>
+        <ul>
+            <li>18 teams start in group stage</li>
+        </ul>
+        <h4>Standings:</h4>
+        <ul>
+            <li>18 teams divided in 2 groups play each team in group 1 time</li>
+            <li>All matches are best out of 3 except for grand final that is best out of 5 </li>
+
+        </ul>
+        </div>
+    </br>
+        <!--Link to more details to this tournament-->
+        <p>For more info about this tournament visit :<a href="https://en.game-tournaments.com/dota-2/international-2021">https://en.game-tournaments.com/dota-2/international-2021</a></p>
+      
+        <form>
+            <!--A like button user can click on if he like page-->
+        <i onclick="likeButton(this)" class="fa fa-thumbs-up" id="TiXLike"></i></form></br>
+        </form>
+        
+        <form>
+            <!--Comment area where user can leave comments for us-->
+            <textarea id="words" rows="3" cols="50" placeholder="Please enter a comment"></textarea></br>
+            <input type="button" onclick="getTixFeedback()" value="Enter" /> <br><!--Button so that user can add conetent once he press enter-->
+            <p id="para"></p>
+        </form>
+    </div>
+   
+    <!--Creating area where user can enter data-->
+    <div class="contatactUsForm">
+        <form>
+            <h3>Contact us:</h3><!--Contact us text area where user can enter his details if he want us to contact him/her-->
+            <div class="myTextContainer">
+            <textarea  id="userDataName" rows="1" cols="30" placeholder="Enter your name?"></textarea></br>
+            <textarea  id="userDataPhoneNum" rows="1" cols="30" placeholder="Enter your phone number?"></textarea></br>
+            <textarea  id="userDataEmail" rows="1" cols="30" placeholder="Enter your email adress?"></textarea></br>
+            <textarea  id="userMessage" rows="10" cols=90% placeholder="Message"></textarea></br>
+            </div>
+            <input type ="button" value="Submit my message" class="submitUserMsg" onclick="userSubMsg()"/><!--Submitting button so that user can submit if he want us to contact them-->
+            </form>
+    </div>
+    
+
+    <div id="button-placing">
+        <!--Buttons that will let user get to the  other pages -->
+    <a href="Home.html"><button type="submit">Home page</button></a>
+        <a href="CurrentLeaderBoard.html"><button type="submit">Current Leader Board</button></a>
+        <a href="Landing Page.html"><button type="submit">Landing Page</button></a>  
+        <a href="save_later.html"><button type="submit">Save for later</button></a>
+    </div>
+    
+    </div>
+<script>  
+//Javascript code for this html page
+//Dropdown list Jq
+$(document).ready(function(){
+$("#dropdownMenu").css("display","none");
+$("#dropdown_toggle").click(function(){//Drop down once click on button
+    $("#dropdownMenu").slideToggle("slow");
+});
+});
+//Creating a function that will let user click on like or dislike and return count
+function likeButton(x) {
+  x.style.color='Green';//Changing the color to green of the like button once clicked on
+}
+//Creating a comment field for user to enter comments and add it to page once he selected to comment ons DPC or TI-X.
+
+//Getting feedback about DPC tournament
+function getDPCFeedback() {
+  text = dpcwords.value;//Getting the value of text 
+  document.getElementById("dpcpara").innerHTML += '<p>'+text
+  document.getElementById("dpcwords").value = ""//Adding text from to innertext/Webpage once clicked on button
+}
+
+//Getting feedback about TIX tournament
+function getTixFeedback() {
+  text = words.value;//Getting the value of text 
+  document.getElementById("para").innerHTML += '<p>'+text
+  document.getElementById("words").value = ""//After alert clear the whole contact us field so there is no user input anymore
+}
+//Contatct us submit field
+function userSubMsg(){
+    alert("Your message have been send to our office. Thank you for your message and have a lovely day further.")
+    //After alert clear the whole contact us field so there is no user input anymore
+    document.getElementById("userDataName").value='';
+    document.getElementById("userDataPhoneNum").value='';
+    document.getElementById("userDataEmail").value='';
+    document.getElementById("userMessage").value='';
+}
+
+
+</script>
+    </body>
+    
+</html>

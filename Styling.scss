@@ -1,0 +1,200 @@
+//SCSS
+$image-height:150px;
+$image-width:200px;
+
+@mixin button-center($left-margin){
+    margin-left:$left-margin;
+    margin-top:20px;
+}
+
+//CSS
+
+//All my styling for Landing page
+#LandingBody{
+    background-image: url(invoker.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    
+}
+
+#Menu{ 
+    //This was made to get to place my box with buttons inside the 3 balls
+    position: absolute;
+    border:none;
+    top:50%;
+    left:38%;
+    margin-top:-50px;  
+    margin-left:-10px;
+        
+        button{//Nested inside the menu id
+            margin:1em;
+            width: 20em;
+            height:3em;
+            border: black;
+            border-radius: 5px;
+            background: none;
+            color:lightskyblue;
+
+        } 
+}
+
+//All my styling for Home page
+
+#homePageStyling{
+    background-image: url(dire-radiant.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    p{//Styling your p in homepage
+        font-family:Arial, Helvetica, sans-serif;
+        color:white;
+    }
+    h2{//Styling your h2 in homepage
+        color:white;
+    }
+    a{//Styling the a in homepage
+        display:inline;
+        color:red;
+    }
+    
+}
+
+.container-home{//Styling the home page container where all the homepage data is inside
+    width:80%;
+    margin:auto;
+    overflow:hidden;
+}
+#button-placing{//Where button position must be on page
+    @include button-center(35%);
+    
+}
+
+//Al the styling for the Current Leaderboard
+.container-leader{//Styling the container where all the content of the leaderboard will be inside 
+    width: 80%;
+    margin:auto;
+    overflow:hidden;
+}
+.topImg{//Styling top img
+    margin-bottom:10px;
+    
+    img{
+        width:$image-width;
+        height:$image-height;
+        display: inline; 
+        
+}
+}
+.bottomImg{//Styling bottom img
+    margin-top:10;
+   
+   
+    img{
+        width:$image-width;
+        height:$image-height;
+        display: inline;
+
+    }
+    
+}
+.leaderboardTable{//Styling the leader board 
+    
+    width:100%;
+    h1{//Styling leaderboard h1 
+        text-align: center;
+    }
+    table,td,th{//Nesting
+        width:1250px;
+        border:solid black;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif ;
+       
+    }
+    a{//Styling leaderboard a 
+        display:inline;
+        position:center;
+
+    }
+}
+#TableBack{//Styling of by table 
+
+background-color:Gainsboro ;  //Giving background color for my table
+}
+
+//All the styling for Upcoming tournament  
+.container-tour{//Styling the container of my upcoming tour where all el of the page will be in
+    width:80%;
+    margin:auto;
+    overflow:hidden;
+  
+}
+
+#DPC-Tournament{//Styling the DPC tournaments div
+    
+    border:1px solid black;
+    width:90%;
+    margin-top:10px;
+    padding-left: 5px;
+    p{//Styling the p inside the DPC div
+        font-size: 15px;
+       
+    }
+    li{//Styling the li inside the DPC div
+        font-size:18px;
+    }
+
+}
+#The-international{//Styling the ti div
+    
+    border:1px solid black;
+    width:90%;
+    margin-top:10px;
+    padding-left: 5px;
+    
+    p{//Styling the p inside the ti div
+        font-size: 15px;
+    }
+    li{
+        font-size:18px;//Styling the li inside the ti div
+    }
+
+}
+.contatactUsForm{//Styling the contact us div
+    
+    border:1px solid black;
+    width:90%;
+    height:500px;
+    margin-top:10px;
+    padding-left: 5px;
+  
+}
+.myTextContainer{//styling the text conatiner that is inside the contact us div
+    display: block;
+    border:10px;
+    padding:10px;
+}
+
+#tourBack{//Giving a background color for the upcoming tour page
+    background-color: Sienna;
+}
+//Styling my dropdown menu
+.navBar {//styling the nav bar that is inside the upcoming tour page
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    display:inline;
+    width:80%;
+  }
+.navBar a{//styling the a el inside the navbar 
+    color:white;
+    padding :14px 16px;
+    text-decoration: none;
+    display: inline;
+}
+.navBar ul,.navBar h4 { //styling the h4 and ul that is inside the nav bar 
+    color:white;
+    padding :14px 16px;
+    text-decoration: none;
+    display: inline;
+}
+
+

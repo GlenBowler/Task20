@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Current Leader Board</title>
+        <link href="Styling.css" rel="stylesheet" type="text/css"><!--Linking to style sheet thats-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!--Linking my JQeury to my page-->
+    </head>
+    <body id ="TableBack">
+    <div class="container-leader">
+        <div class="topImg"><!--All the pics that will be displayed on top of leader board-->
+            <img src="Liquid.png" alt="Team liquid photo">
+            <img src="og.png" alt="OG photo">
+            <img src="eg.jpg" alt="EG photo">
+            <img src="vikin.png" alt="Vikin.gg photo">
+            <img src="nigma.jpg" alt="Nigma photo">
+            <img src="sg.png" alt="SG photo">
+        </div>
+        
+        <div class="leaderboardTable" style="overflow-x: auto;"><!--Leaderboard that is inside a table -->
+            <h1><ins>Leaderboard:</ins></h1>
+            <table>
+                <tr>
+                    <th></th><!--The header of the table-->
+                    <th>Total games played</th>
+                    <th>Games won</th>
+                    <th>Games lost</th>
+                    <th>Tournament won</th>
+                    <th>Amount of points</th>
+                </tr>
+                <tr><!--All the content that is inside row 1 -->
+                    <td>Team liquid</td>
+                    <td>120</td>
+                    <td>100</td>
+                    <td>20</td>
+                    <td>9</td>
+                    <td>6000</td>
+                </tr>
+                <tr><!--All the content that is inside row 2 -->
+                <td>Team secret</td>
+                    <td>110</td>
+                    <td>80</td>
+                    <td>30</td>
+                    <td>4</td>
+                    <td>4000</td>
+                </tr>
+                <tr><!--All the content that is inside row 3 -->
+                <td>OG</td>
+                    <td>112</td>
+                    <td>76</td>
+                    <td>36</td>
+                    <td>4</td>
+                    <td>3400</td>
+                </tr>
+                <tr><!--All the content that is inside row 4 -->
+                <td>EG</td>
+                    <td>110</td>
+                    <td>70</td>
+                    <td>40</td>
+                    <td>3</td>
+                    <td>2800</td>
+                </tr>
+                <tr><!--All the content that is inside row 5 -->
+                <td>VP</td>
+                    <td>100</td>
+                    <td>50</td>
+                    <td>50</td>
+                    <td>1</td>
+                    <td>2000</td>
+                </tr>
+                <tr><!--All the content that is inside row 6 -->
+                <td>Vikin.GG</td>
+                    <td>98</td>
+                    <td>60</td>
+                    <td>38</td>
+                    <td>0</td>
+                    <td>1000</td>
+                    </tr>
+            </table>
+        </div>
+            <button class="hide">Hide</button><!--Button to hide table -->
+            <button class="show">Show</button><!--Button to show after table has been hide table -->
+        <div id="button-placing">
+            <!--Button so that you can access other pages that we created-->
+        <a href="Home.html"><button type="submit">Home page</button></a>
+        <a href="UpcomingTour.html"><button type="submit">Upcoming Tournaments</button></a>
+        <a href="Landing Page.html"><button type="submit">Landing Page</button></a>    
+        <a href="save_later.html"><button type="submit">Save for later</button></a>
+        </div>
+       
+
+        <div class="bottomImg"><!--All the pic of teams that is under the leader board-->
+            <img src="secret.png" alt="Team Secret photo">
+            <img src="vp.png" alt="VP photo">
+            <img src="navi.png" alt="Navi photo">
+            <img src="alliance.png" alt="Alliance photo">
+            <img src="psg.png" alt="PGS photo">
+            <img src="TNC.png" alt="TNC photo">
+        </div>
+    </div>    
+    <script>
+        //JS and JQeury for this HTML page
+
+        //JQ Hiding of table 
+        $(".hide").click(function(){
+            $(".leaderboardTable").hide();
+        });
+        //JQ Show your table
+        $(".show").click(function(){
+            $(".leaderboardTable").show();
+        });
+    </script>
+    </body>
+
+</html>
